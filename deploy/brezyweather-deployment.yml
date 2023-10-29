@@ -30,13 +30,11 @@ spec:
             port: app-port
           initialDelaySeconds: 5  # Delay before the probe starts
           periodSeconds: 10  # Probe runs every 10 seconds
-          failureThreshold: 3  # Number of failures before probe marked as failed
-          timeoutSeconds: 2  # Maximum seconds until operation times out
         readinessProbe:
           httpGet:
             path: /api/v1/health/ready
             port: app-port
           initialDelaySeconds: 10  # Delay before the probe starts
           periodSeconds: 20  # Probe runs every 20 seconds
-          failureThreshold: 3  # Number of failures before probe marked as failed
-          timeoutSeconds: 2  # Maximum seconds until operation times out
+          failureThreshold: 2  # Number of failures before probe marked as failed
+          timeoutSeconds: 3  # Maximum seconds until operation times out
