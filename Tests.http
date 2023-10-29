@@ -1,0 +1,12 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@hostname=localhost
+@port=5153
+
+###
+// Liveness probe
+GET http://{{hostname}}:{{port}}/api/v1/health/live
+
+###
+// Readiness probe
+GET http://{{hostname}}:{{port}}/api/v1/health/ready
