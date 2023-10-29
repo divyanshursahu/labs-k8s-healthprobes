@@ -24,17 +24,3 @@ spec:
         ports:
         - name: app-port
           containerPort: 80
-        livenessProbe:
-          httpGet:
-            path: /api/v1/health/live
-            port: app-port
-          initialDelaySeconds: 5  # Delay before the probe starts
-          periodSeconds: 10  # Probe runs every 10 seconds
-        readinessProbe:
-          httpGet:
-            path: /api/v1/health/ready
-            port: app-port
-          initialDelaySeconds: 10  # Delay before the probe starts
-          periodSeconds: 20  # Probe runs every 20 seconds
-          failureThreshold: 2  # Number of failures before probe marked as failed
-          timeoutSeconds: 3  # Maximum seconds until operation times out
