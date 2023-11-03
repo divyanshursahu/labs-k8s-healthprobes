@@ -22,4 +22,4 @@ Basic knowledge of health probes in Kubernetes.
 Familiarity with YAML syntax and RESTful APIs.
 
 ## Hands-on Lab URL
-https://www.udemy.com/labs/3556/overview
+https://www.udemy.com/labs/implementing-health-probes-to-monitor-container-health/overview
